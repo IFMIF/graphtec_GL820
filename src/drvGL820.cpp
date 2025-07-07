@@ -37,14 +37,14 @@ void readTask(void *drvPvt)
 //
 //
 drvGL820::drvGL820(const char *portName, const char *asynIpPortName) : asynPortDriver(portName,
-		   0, /* maxAddr */
+		   0, // maxAddr
 		   NUM_GL820_PARAMS,
-		   asynInt32Mask | asynFloat64Mask | asynEnumMask | asynDrvUserMask | asynOctetMask, /* Inter face mask */
-		   asynOctetMask | asynEnumMask | asynDrvUserMask ,  /* Interrupt mask */
-		   0, /* asynFlags.  This driver does not block and it is not multi-device, so flag is 0 */
-		   1, /* Autoconnect */
-		   0, /* Default priority */
-		   0) /* Default stack size*/
+		   //asynInt32Mask | asynFloat64Mask | asynEnumMask | asynDrvUserMask | asynOctetMask, // Interface mask
+		   asynOctetMask | asynEnumMask | asynDrvUserMask ,  // Interrupt mask
+		   0, // asynFlags.  This driver does not block and it is not multi-device, so flag is 0
+		   1, // Autoconnect
+		   0, // Default priority
+		   0) // Default stack size
 {
   char tmpStr[32];
   asynStatus status;

@@ -93,7 +93,7 @@ drvGL820::DCRangeStrCmndParse(char *readBuf, CH_COEF &coef)
       coef.intCoef = 4;
     }
 
-    char *dataDef[] =  {"20MV",				// 
+    const char *dataDef[] =  {"20MV",				// 
 			"50MV", "100MV", "200MV",	//
 			"500MV", "1V",   "2V",		//
 			"5V",    "10V",  "20V", "1-5V",	//

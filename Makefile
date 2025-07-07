@@ -1,14 +1,9 @@
-# Makefile for Asyn GL820 support
-#
-# Created by norume on Wed Jan 31 12:50:59 2007
-# Based on the Asyn devGpib template
-
+# Makefile at top of application tree
 TOP = .
 include $(TOP)/configure/CONFIG
 
-DIRS := configure
-DIRS += $(wildcard *[Ss]up)
-DIRS += $(wildcard *[Aa]pp)
-#DIRS += $(wildcard ioc[Bb]oot)
+# Directories to build, any order
+DIRS += configure src testApp
 
+# Add any additional dependency rules here:
 include $(TOP)/configure/RULES_TOP
